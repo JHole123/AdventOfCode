@@ -6,7 +6,7 @@ namespace PuzzleSolutions
 {
     public class SolutionRunner
     {
-        public static void Main(string[] args)
+        public static void Main()
         {
             MyIO.CreateEmptyDataFiles(2021);
             var part1 = Y2021_D1.SolvePart1();

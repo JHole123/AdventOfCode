@@ -24,12 +24,10 @@ namespace ChallengeSolutions.Helpers
             }
         }
 
-
-
         public static List<string> ReadStringsFromFile(int year, int day = 1, int part = 1, bool isTestFile = false)
         {
             var dataFilePath = GetDataFilePath(year, day, part, isTestFile);
-            List<string> lines = System.IO.File.ReadAllLines(dataFilePath).ToList();
+            List<string> lines = File.ReadAllLines(dataFilePath).ToList();
             return lines;
         }
 
@@ -52,7 +50,7 @@ namespace ChallengeSolutions.Helpers
             var intList = new List<int>();
             foreach (string item in list)
             {
-                if (Int32.TryParse(item, out var result))
+                if (int.TryParse(item, out var result))
                     intList.Add(result);
                 else
                 {
